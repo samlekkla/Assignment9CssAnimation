@@ -7,7 +7,26 @@
     <title>Assignment 9: CSS Animation</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slideInUp {
+            animation: slideInUp 4s ease;
+        }
+    </style>
 </head>
+
+
 
 <body>
     <div class="invation">
@@ -16,10 +35,12 @@
         <form action="#" method="post" class="animate__animated animate__slideInUp">
             <input type="email" name="email" id="email" placeholder="Enter your email" required>
             <button type="submit">Subscribe</button>
-            <img src="images/New.svg" alt="A pic of an ipad ">
+            <svg class="animate__animated slideInUp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+                <use xlink:href="images/New.svg#image" />
+            </svg>
         </form>
     </div>
-   
+
 </body>
 
 
